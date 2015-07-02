@@ -17,21 +17,29 @@ int main()
  	int t,n,i;
     int arr[100002];
     int res[100002];
-    do{
-    	cin>>n;
-    	for(i=1;i<=n;i++)
-    		cin>>arr[i];
-    	
-    	for(i=1;i<=n;i++);
-    		res[arr[i]]=i;
-    	
-    	for(i=1;i<=n;i++)
-    		cout<<res[i]<<" ";
-    	cout<<endl;
+    scanf("%d",&t);
+    while(t!=0){
+    	n=t;
+    	for(i=1;i<=n;i++){
+    		scanf("%d",&arr[i]);
+            res[arr[i]]=i;
 
-
-    	cin>>t;
-    }while(t!=0);
+        }
+    	
+    	int flag=0;
+    	for(i=1;i<=n;i++)
+    		if(arr[i]!=res[i]){
+                flag=1;
+                break;
+            }
+        
+        if(flag)
+            printf("not ambiguous\n");
+        else
+            printf("ambiguous\n");
+    
+    	scanf("%d",&t);
+    }
 
     return 0;
 }
