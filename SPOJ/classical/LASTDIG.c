@@ -7,17 +7,18 @@
 
 int main()
 {
-    int i,j,c,len,num,temp,t,res,a,b;
-    
+    int i,j,c,len,num,temp,t,res;
+    long long int b;
+    char a[1001];
     scanf("%d",&t);
     while(t--)
     {
-    	scanf("%d %d",&a,&b);
+    	scanf("%s %lld",&a,&b);
     	if(b==0){
     		printf("1\n");
     		continue;
     	}
-    	c=a%10;
+    	c=a[strlen(a)-1]-'0';
     	if(c==0 || c==1 || c==5 || c==6 )
     		res=c;
     	else if(c==2 || c==3 || c==7 || c==8)

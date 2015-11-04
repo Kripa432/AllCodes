@@ -10,20 +10,14 @@ int main()
 
     for(int i=1;i<size;i++){
     	int cur=arr[i];
-    	
     	for(j=i-1;j>=0;j--){
-    	
-    	
     		if(arr[j]>cur){
     			arr[j+1]=arr[j];
     		}
-    		else{
+    		else
     			break;
-    		}
-    	
-    		
+    			
     	}
-    	
     	arr[j+1]=cur;
     
     }
